@@ -16,7 +16,6 @@ numberOfOperations = 0
 # Initialize pygame and the window.
 windowSurface, clock, font = aux_functions.initialize("Quick Sort")
 
-
 def partition(listOfNums, start, end):
     global numberOfOperations
     
@@ -58,6 +57,12 @@ def check_input():
                 if isSorted:
                     isSorted = False
                     run_program() 
+            if event.key == pygame.K_LEFT:
+                settings.FPS -= 10
+                print(settings.FPS)
+            if event.key == pygame.K_RIGHT:
+                settings.FPS += 10
+                print(settings.FPS)
 
 
 def run_program():
