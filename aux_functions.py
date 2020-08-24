@@ -38,8 +38,7 @@ def scaleNumber(num):
 ### Functions to display columns or text.
 
 def display_operations(number, windowSurface, font):
-    """ Display the number above the column. """
-    textToDisplay = f"Number of operations : {number}"
+    textToDisplay = f"Number of swaps : {number}"
     numberImage = font.render(textToDisplay, True,
                              settings.columnColor, settings.backgroundColor)
     numberRect = numberImage.get_rect()
