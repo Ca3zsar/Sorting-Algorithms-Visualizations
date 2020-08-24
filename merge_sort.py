@@ -13,11 +13,7 @@ numberOfOperations = 0
 isSorted = False
 
 # Initialize pygame and the window.
-pygame.init()
-windowSurface = pygame.display.set_mode((settings.width, settings.height))
-pygame.display.set_caption("Merge sort")
-clock = pygame.time.Clock()
-font = pygame.font.SysFont(None, 24)
+windowSurface, clock, font = aux_functions.initialize("Merge Sort")
 
 
 def merge(listOfNums, start, mid, end):
