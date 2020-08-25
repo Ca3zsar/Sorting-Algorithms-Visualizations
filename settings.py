@@ -1,5 +1,6 @@
 columnColor = (255, 255, 255)
 backgroundColor = (0, 0, 0)
+minColor = (0, 0, 255)
 highlightColor = (255, 0, 0)
 
 width, height = 800, 600

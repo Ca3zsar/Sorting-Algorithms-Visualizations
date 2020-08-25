@@ -68,7 +68,8 @@ def draw_column(num, pos, color, windowSurface):
     pygame.draw.rect(windowSurface, color, colRect) 
 
 
-def display(listOfNums, index, numberOfOperations, windowSurface, font, clock):
+def display(listOfNums, index, minim, numberOfOperations, 
+            windowSurface, font, clock):
     """ Update the screen. """
     windowSurface.fill(settings.backgroundColor)
     
@@ -76,6 +77,8 @@ def display(listOfNums, index, numberOfOperations, windowSurface, font, clock):
         # If the current number is the last compared one, change its color.
         if i == index:
             color = settings.highlightColor
+        elif i == minim:
+            color = settings.minColor
         else:
             color = settings.columnColor
         

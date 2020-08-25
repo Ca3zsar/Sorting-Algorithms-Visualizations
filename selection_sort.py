@@ -14,7 +14,7 @@ isSorted = False
 numberOfOperations = 0
 
 # Initialize pygame and the window.
-windowSurface, clock, font = aux_functions.initialize("Insertion Sort")
+windowSurface, clock, font = aux_functions.initialize("Selection Sort")
 
 
 def check_input():
@@ -47,10 +47,12 @@ def selection_sort(listOfNums):
             if listOfNums[j] < minimum:
                 minimum = listOfNums[j]
                 index = j
-        
+            
+            aux_functions.display(listOfNums, j, index, numberOfOperations,
+                            windowSurface, font, clock)
             
         listOfNums[i], listOfNums[index] = listOfNums[index], listOfNums[i]   
-        aux_functions.display(listOfNums, index, numberOfOperations,
+        aux_functions.display(listOfNums, i, index, numberOfOperations,
                               windowSurface, font, clock)             
         
 
@@ -64,7 +66,7 @@ def run_program():
             selection_sort(newList)
             isSorted = True
         check_input()
-        aux_functions.display(newList, 0, numberOfOperations,
+        aux_functions.display(newList, len(newList), 0, numberOfOperations,
                               windowSurface, font, clock) 
     
 
