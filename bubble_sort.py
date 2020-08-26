@@ -46,7 +46,7 @@ def check_input():
                 if isSorted:
                     isSorted = False
                     run_program()
-        if event.key == pygame.K_LEFT:
+            if event.key == pygame.K_LEFT:
                 settings.FPS -= 10
                 print(settings.FPS)
             if event.key == pygame.K_RIGHT:
